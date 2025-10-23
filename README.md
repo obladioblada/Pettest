@@ -75,8 +75,33 @@ This will:
 
 The app will be accessible at: `http://localhost:8080`
 
+
+
 ---
 
+### Example cURL Commands for Pet Management API
+
+Here are example `curl` commands to interact with the Pet Management REST API running locally at `http://localhost:8080/pets`.
+
+---
+
+#### Create a new Pet
+`curl -X POST http://localhost:8080/pets
+-H "Content-Type: application/json"
+-d '{"name":"Buddy", "species":"Dog"}'`
+
+#### Retrieve a Pet by ID
+`curl -X GET http://localhost:8080/pets/1`
+
+#### Update a Pet by ID
+`curl -X PUT http://localhost:8080/pets/1
+-H "Content-Type: application/json"
+-d '{"name":"Buddy", "species":"Golden Retriever"}'`
+
+#### Delete a Pet by ID
+`curl -X DELETE http://localhost:8080/pets/1`
+
+---
 ## Running Tests
 
 Run all unit and integration tests with:
